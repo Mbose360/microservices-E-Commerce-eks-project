@@ -41,7 +41,7 @@ data "aws_security_group" "selected" {
 resource "aws_eks_cluster" "eks" {
   name = "project-eks"
 
-  role_arn = "arn:aws:iam::381492192944:role/c191399a4934151l13165541t1w381492-LabEksClusterRole-7kwEcmC4VNc8"
+  role_arn = "arn:aws:iam::381492192944:role/LabRole"
 
   vpc_config {
     subnet_ids         = [data.aws_subnet.subnet-1.id, data.aws_subnet.subnet-2.id]
